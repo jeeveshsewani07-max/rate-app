@@ -2,7 +2,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { ratingService } from '../services/ratingService';
 import { useOfflineQueueStore } from '../store/offlineQueueStore';
 import { useIsOnline } from '../../../core/hooks/useNetworkStatus';
-import { Trait } from '../../../app/config/constants';
+import { Trait } from '../../../bootstrap/config/constants';
 import { AssignmentStatus } from '../types';
 
 const QUERY_KEY = ['daily-assignment'];

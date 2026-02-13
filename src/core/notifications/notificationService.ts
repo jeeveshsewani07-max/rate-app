@@ -26,39 +26,41 @@ class NotificationService {
   private expoPushToken: string | null = null;
 
   async initialize(): Promise<string | null> {
-    if (!Device.isDevice) {
-      console.log('Push notifications require a physical device');
-      return null;
-    }
-
-    const { status: existingStatus } = await Notifications.getPermissionsAsync();
-    let finalStatus = existingStatus;
-
-    if (existingStatus !== 'granted') {
-      const { status } = await Notifications.requestPermissionsAsync();
-      finalStatus = status;
-    }
-
-    if (finalStatus !== 'granted') {
-      console.log('Push notification permission not granted');
-      return null;
-    }
-
-    // Get Expo push token
     try {
-      const tokenData = await Notifications.getExpoPushTokenAsync({
-        projectId: 'your-project-id', // Replace with actual project ID
-      });
-      this.expoPushToken = tokenData.data;
+      if (!Device.isDevice) {
+        console.log('Push notifications require a physical device');
+        return null;
+      }
+
+      const { status: existingStatus } = await Notifications.getPermissionsAsync();
+      let finalStatus = existingStatus;
+
+      if (existingStatus !== 'granted') {
+        const { status } = await Notifications.requestPermissionsAsync();
+        finalStatus = status;
+      }
+
+      if (finalStatus !== 'granted') {
+        console.log('Push notification permission not granted');
+        return null;
+      }
 
       // Configure Android channel
       if (Platform.OS === 'android') {
         await this.setupAndroidChannels();
       }
 
-      return this.expoPushToken;
+      // Get Expo push token (may fail without valid EAS project ID)
+      try {
+        const tokenData = await Notifications.getExpoPushTokenAsync();
+        this.expoPushToken = tokenData.data;
+        return this.expoPushToken;
+      } catch (tokenError) {
+        console.warn('Failed to get push token (expected in dev):', tokenError);
+        return null;
+      }
     } catch (error) {
-      console.error('Failed to get push token:', error);
+      console.warn('Notification initialization failed:', error);
       return null;
     }
   }

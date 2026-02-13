@@ -1,7 +1,7 @@
 import { apiClient } from '../../../core/api/client';
 import { ENDPOINTS } from '../../../core/api/endpoints';
 import { secureStorage } from '../../../core/storage/secureStorage';
-import { APP_CONFIG } from '../../../app/config/constants';
+import { APP_CONFIG } from '../../../bootstrap/config/constants';
 import {
   LoginRequest,
   RegisterRequest,

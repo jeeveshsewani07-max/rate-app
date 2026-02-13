@@ -10,7 +10,7 @@ interface EnvConfig {
 
 const ENV: Record<string, EnvConfig> = {
   development: {
-    apiBaseUrl: 'http://localhost:3000/api/v1',
+    apiBaseUrl: 'http://192.168.2.167:3000/api/v1',
     appEnv: 'development',
     enableMockApi: true,
     queryStaleTime: 1000 * 60 * 5, // 5 minutes

@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npx expo export:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nBuild out full app: auth, rating, analytics, groups, settings with API integration\n\nAdd complete feature-based architecture with navigation \\(auth flow + bottom tabs\\),\ndesign system, reusable UI components, and wire all screens to their respective\nAPI hooks replacing mock/placeholder data. Includes offline rating queue with\nsync, push notification infrastructure, and secure token storage.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git remote remove:*)",
+      "Bash(gh repo create:*)",
+      "Bash(npm install:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd Express + Prisma backend server with 21 API endpoints\n\nImplements auth \\(JWT with refresh token rotation\\), groups, ratings\nwith daily assignment algorithm, analytics, and notifications modules.\nPostgreSQL via Prisma ORM, Zod validation, and seed data included.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(where:*)",
+      "Bash(psql:*)",
+      "Bash(pg_isready:*)",
+      "Bash(dir:*)",
+      "Bash(winget:*)",
+      "Bash(\"C:\\\\Program Files\\\\PostgreSQL\\\\17\\\\bin\\\\pg_isready\" -h localhost -p 5432)",
+      "Bash(\"C:\\\\Program Files\\\\PostgreSQL\\\\17\\\\bin\\\\psql\" -U postgres -h localhost -c \"SELECT 1\")",
+      "Bash(PGPASSWORD=postgres \"C:\\\\Program Files\\\\PostgreSQL\\\\17\\\\bin\\\\psql\":*)",
+      "Bash(npx prisma migrate:*)",
+      "Bash(npx prisma db seed:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(copy /b srcindex.ts+,, srcindex.ts)",
+      "Bash(TOKEN=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmNGNhMjZlMi1iNTdiLTQ4NjItYWVhZi02YzA2NGI4ZjgxYmMiLCJpYXQiOjE3NzA1NDI0MTEsImV4cCI6MTc3MDU0MzMxMX0.6gHtdI9c723-nGGnIF8wHvYI5NA4q0MbCJDyHgVGRb8\")",
+      "Bash(git commit:*)",
+      "Bash(ipconfig:*)",
+      "Bash(npx expo:*)",
+      "Bash(npm ls:*)",
+      "Bash(cmd //c \"rename src\\\\app bootstrap\")",
+      "Bash(powershell:*)",
+      "Bash(tasklist:*)",
+      "Bash(taskkill:*)",
+      "Bash(cmd:*)",
+      "Bash(ls \"C:\\\\Users\\\\dell\\\\rate-app\\\\src\\\\app\"\" 2>&1 || echo \"Directory does not exist \")"
+    ]
+  }
+}

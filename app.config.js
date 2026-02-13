@@ -3,6 +3,7 @@ module.exports = {
     name: 'RateApp',
     slug: 'rate-app',
     version: '1.0.0',
+    entryPoint: './index.ts',
     orientation: 'portrait',
     icon: './assets/icon.png',
     userInterfaceStyle: 'light',
@@ -36,6 +37,7 @@ module.exports = {
       bundler: 'metro',
     },
     plugins: [
+      'expo-dev-client',
       'expo-secure-store',
       [
         'expo-notifications',

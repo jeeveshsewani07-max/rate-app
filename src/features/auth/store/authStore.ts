@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { secureStorage } from '../../../core/storage/secureStorage';
-import { APP_CONFIG } from '../../../app/config/constants';
+import { APP_CONFIG } from '../../../bootstrap/config/constants';
 import { AuthStore, AuthResponse, User } from '../types';
 import { apiClient } from '../../../core/api/client';
 

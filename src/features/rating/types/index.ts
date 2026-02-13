@@ -1,4 +1,4 @@
-import { Trait } from '../../../app/config/constants';
+import { Trait } from '../../../bootstrap/config/constants';
 
 export interface DailyAssignment {
   id: string;

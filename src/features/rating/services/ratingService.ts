@@ -1,6 +1,6 @@
 import { apiClient } from '../../../core/api/client';
 import { ENDPOINTS } from '../../../core/api/endpoints';
-import { Trait } from '../../../app/config/constants';
+import { Trait } from '../../../bootstrap/config/constants';
 import {
   DailyAssignment,
   DailyAssignmentResponse,

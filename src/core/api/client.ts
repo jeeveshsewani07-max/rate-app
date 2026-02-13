@@ -4,8 +4,8 @@ import axios, {
   AxiosRequestConfig,
   InternalAxiosRequestConfig,
 } from 'axios';
-import { env } from '../../app/config/env';
-import { APP_CONFIG } from '../../app/config/constants';
+import { env } from '../../bootstrap/config/env';
+import { APP_CONFIG } from '../../bootstrap/config/constants';
 import { secureStorage } from '../storage/secureStorage';
 import { ApiError, ApiErrorResponse, RefreshTokenResponse } from './types';
 import { ENDPOINTS } from './endpoints';

@@ -12,7 +12,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation, useRoute, RouteProp } from '@react-navigation/native';
 import { HomeStackParamList } from '../../../navigation/types';
 import { useSubmitRating } from '../hooks/useDailyAssignment';
-import { TRAIT_CATEGORIES, Trait, APP_CONFIG } from '../../../app/config/constants';
+import { TRAIT_CATEGORIES, Trait, APP_CONFIG } from '../../../bootstrap/config/constants';
 import { colors, spacing, typography, borderRadius } from '../../../shared/theme';
 
 type RatingCardRouteProp = RouteProp<HomeStackParamList, 'RatingCard'>;
